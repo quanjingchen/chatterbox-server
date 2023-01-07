@@ -26,21 +26,10 @@ var ip = '127.0.0.1';
 // After creating the server, we will tell it to listen on the given port and IP. */
 console.log('port: ', port);
 
-//define database array and push a message into it
-var data = [];
-let message = {};
-message.text = 'Hello World';
-message.username = 'Dhruv';
-message.roomname = 'test';
-data.push(message);
-let message2 = {};
-message2.text = 'hhhhh';
-message2.username = 'q';
-message2.roomname = 'test';
-data.push(message2);
 
 
-var server = http.createServer(handleRequest(data));
+
+var server = http.createServer(handleRequest);
 console.log('Listening on http://' + ip + ':' + port);
 server.listen(port, ip);
 
