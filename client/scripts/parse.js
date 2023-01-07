@@ -4,6 +4,8 @@ var Parse = {
 
   create: function(message, successCB, errorCB = null) {
 
+    console.log('post message in client', message);
+
     $.ajax({
       url: Parse.server,
       type: 'POST',
@@ -18,7 +20,7 @@ var Parse = {
 
   readAll: function(successCB, errorCB = null) {
     $.ajax({
-      url: Parse.server,
+      url: 'http://127.0.0.1:3000/classes/messages',
       type: 'GET',
       contentType: 'application/json',
       success: successCB,
